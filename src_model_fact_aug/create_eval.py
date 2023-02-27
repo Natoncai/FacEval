@@ -14,7 +14,7 @@ import augmentation_ops as ops
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 # load samsum test
-file_path   = './data/samsum.test.jsonl'
+file_path   = './data/wiki-summary.text.csv'
 raw_samples = []
 with open(file_path, 'r') as f:
     lines = f.readlines()
@@ -22,17 +22,7 @@ with open(file_path, 'r') as f:
         sample = json.loads(line)
         raw_samples.append(sample)
 
-# = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-# load samsum test back traslation
-file_path   = './data/samsum.test.bt.jsonl'
-bt_samples = []
-with open(file_path, 'r') as f:
-    lines = f.readlines()
-    for line in lines:
-        sample = json.loads(line)
-        bt_samples.append(sample)
-
-all_pos_sample = raw_samples + bt_samples
+all_pos_sample = raw_samples
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 # perform Speaker Swap
