@@ -46,9 +46,21 @@ def _ss_corrupt(sample):
 print("perform Speaker Swap * 5 times")
 
 ss_samples = process_map(_ss_corrupt, all_pos_sample, max_workers=10, chunksize=1)
+ss_samples2 = process_map(_ss_corrupt, all_pos_sample, max_workers=10, chunksize=1)
+ss_samples3 = process_map(_ss_corrupt, all_pos_sample, max_workers=10, chunksize=1)
+ss_samples4 = process_map(_ss_corrupt, all_pos_sample, max_workers=10, chunksize=1)
+ss_samples5 = process_map(_ss_corrupt, all_pos_sample, max_workers=10, chunksize=1)
+
 
 ss_samples = [item[0] for item in ss_samples if item[0] is not None]
+ss_samples2 = [item[0] for item in ss_samples2 if item[0] is not None]
+ss_samples3 = [item[0] for item in ss_samples3 if item[0] is not None]
+ss_samples4 = [item[0] for item in ss_samples4 if item[0] is not None]
+ss_samples5 = [item[0] for item in ss_samples5 if item[0] is not None]
 
+for item in ss_samples2 + ss_samples3 + ss_samples4 + ss_samples5:
+    if item not in ss_samples:
+        ss_samples.append(item)
 
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -63,10 +75,20 @@ def _es_corrupt(sample):
 print("perform Entity Swap * 5 times")
 
 es_samples = process_map(_es_corrupt, all_pos_sample, max_workers=10, chunksize=1)
-
+es_samples2 = process_map(_es_corrupt, all_pos_sample, max_workers=10, chunksize=1)
+es_samples3 = process_map(_es_corrupt, all_pos_sample, max_workers=10, chunksize=1)
+es_samples4 = process_map(_es_corrupt, all_pos_sample, max_workers=10, chunksize=1)
+es_samples5 = process_map(_es_corrupt, all_pos_sample, max_workers=10, chunksize=1)
 
 es_samples = [item[0] for item in es_samples if item[0] is not None]
+es_samples2 = [item[0] for item in es_samples2 if item[0] is not None]
+es_samples3 = [item[0] for item in es_samples3 if item[0] is not None]
+es_samples4 = [item[0] for item in es_samples4 if item[0] is not None]
+es_samples5 = [item[0] for item in es_samples5 if item[0] is not None]
 
+for item in es_samples2 + es_samples3 + es_samples4 + es_samples5:
+    if item not in es_samples:
+        es_samples.append(item)
 
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -81,10 +103,20 @@ def _ds_corrupt(sample):
 print("perform Date Swap * 5 times")
 
 ds_samples = process_map(_ds_corrupt, all_pos_sample, max_workers=10, chunksize=1)
-
+ds_samples2 = process_map(_ds_corrupt, all_pos_sample, max_workers=10, chunksize=1)
+ds_samples3 = process_map(_ds_corrupt, all_pos_sample, max_workers=10, chunksize=1)
+ds_samples4 = process_map(_ds_corrupt, all_pos_sample, max_workers=10, chunksize=1)
+ds_samples5 = process_map(_ds_corrupt, all_pos_sample, max_workers=10, chunksize=1)
 
 ds_samples = [item[0] for item in ds_samples if item[0] is not None]
+ds_samples2 = [item[0] for item in ds_samples2 if item[0] is not None]
+ds_samples3 = [item[0] for item in ds_samples3 if item[0] is not None]
+ds_samples4 = [item[0] for item in ds_samples4 if item[0] is not None]
+ds_samples5 = [item[0] for item in ds_samples5 if item[0] is not None]
 
+for item in ds_samples2 + ds_samples3 + ds_samples4 + ds_samples5:
+    if item not in ds_samples:
+        ds_samples.append(item)
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 # perform Number Swap
@@ -98,10 +130,20 @@ def _ns_corrupt(sample):
 print("perform Number Swap * 5 times")
 
 ns_samples = process_map(_ns_corrupt, all_pos_sample, max_workers=10, chunksize=1)
-
+ns_samples2 = process_map(_ns_corrupt, all_pos_sample, max_workers=10, chunksize=1)
+ns_samples3 = process_map(_ns_corrupt, all_pos_sample, max_workers=10, chunksize=1)
+ns_samples4 = process_map(_ns_corrupt, all_pos_sample, max_workers=10, chunksize=1)
+ns_samples5 = process_map(_ns_corrupt, all_pos_sample, max_workers=10, chunksize=1)
 
 ns_samples = [item[0] for item in ns_samples if item[0] is not None]
+ns_samples2 = [item[0] for item in ns_samples2 if item[0] is not None]
+ns_samples3 = [item[0] for item in ns_samples3 if item[0] is not None]
+ns_samples4 = [item[0] for item in ns_samples4 if item[0] is not None]
+ns_samples5 = [item[0] for item in ns_samples5 if item[0] is not None]
 
+for item in ns_samples2 + ns_samples3 + ns_samples4 + ns_samples5:
+    if item not in ns_samples:
+        ns_samples.append(item)
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 # perform Pronoun Swap
@@ -115,10 +157,16 @@ def _ps_corrupt(sample):
 print("perform Pronoun Swap * 5 times")
 
 ps_samples = process_map(_ps_corrupt, all_pos_sample, max_workers=10, chunksize=1)
-
+ps_samples2 = process_map(_ps_corrupt, all_pos_sample, max_workers=10, chunksize=1)
+ps_samples3 = process_map(_ps_corrupt, all_pos_sample, max_workers=10, chunksize=1)
+ps_samples4 = process_map(_ps_corrupt, all_pos_sample, max_workers=10, chunksize=1)
+ps_samples5 = process_map(_ps_corrupt, all_pos_sample, max_workers=10, chunksize=1)
 
 ps_samples = [item[0] for item in ps_samples if item[0] is not None]
-
+ps_samples2 = [item[0] for item in ps_samples2 if item[0] is not None]
+ps_samples3 = [item[0] for item in ps_samples3 if item[0] is not None]
+ps_samples4 = [item[0] for item in ps_samples4 if item[0] is not None]
+ps_samples5 = [item[0] for item in ps_samples5 if item[0] is not None]
 
 for item in ps_samples2 + ps_samples3 + ps_samples4 + ps_samples5:
     if item not in ps_samples:
@@ -136,10 +184,20 @@ def _ng_corrupt(sample):
 print("perform Negation * 5 times")
 
 ng_samples = process_map(_ng_corrupt, all_pos_sample, max_workers=10, chunksize=1)
-
+ng_samples2 = process_map(_ng_corrupt, all_pos_sample, max_workers=10, chunksize=1)
+ng_samples3 = process_map(_ng_corrupt, all_pos_sample, max_workers=10, chunksize=1)
+ng_samples4 = process_map(_ng_corrupt, all_pos_sample, max_workers=10, chunksize=1)
+ng_samples5 = process_map(_ng_corrupt, all_pos_sample, max_workers=10, chunksize=1)
 
 ng_samples = [item[0] for item in ng_samples if item[0] is not None]
+ng_samples2 = [item[0] for item in ng_samples2 if item[0] is not None]
+ng_samples3 = [item[0] for item in ng_samples3 if item[0] is not None]
+ng_samples4 = [item[0] for item in ng_samples4 if item[0] is not None]
+ng_samples5 = [item[0] for item in ng_samples5 if item[0] is not None]
 
+for item in ng_samples2 + ng_samples3 + ng_samples4 + ng_samples5:
+    if item not in ng_samples:
+        ng_samples.append(item)
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
