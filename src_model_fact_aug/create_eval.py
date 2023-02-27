@@ -14,7 +14,7 @@ import augmentation_ops as ops
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 # load samsum test
-file_path   = './data/wiki-summary.text.csv'
+file_path   = './data/ wiki-summary.test.csv'
 raw_samples = []
 with open(file_path, 'r') as f:
     lines = f.readlines()
