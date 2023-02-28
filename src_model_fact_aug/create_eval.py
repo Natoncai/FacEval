@@ -18,13 +18,9 @@ import augmentation_ops as ops
 file_path   = './data/ wiki-summary.test.csv'
 raw_samples = []
 with open(file_path, 'r') as f:
-    print(f)
-    lines = f.readlines()
-    for line in lines:
-        sample = json.loads(line)
-        raw_samples.append(sample)
+    reader = csv.DictReader(f)
 
-all_pos_sample = raw_samples
+all_pos_sample = reader
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 # perform Speaker Swap
