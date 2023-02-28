@@ -5,9 +5,8 @@
 # -----
 # Copyright (c) 2022 National University of Singapore
 # -----
-
-import json
 import csv
+import json
 import logging
 
 from tqdm.contrib.concurrent import process_map
@@ -15,12 +14,28 @@ import augmentation_ops as ops
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 # load samsum test
-file_path   = './data/ wiki-summary.test.csv'
+file_path   = './data/samsum.test.jsonl'
 raw_samples = []
 with open(file_path, 'r') as f:
-    reader = csv.DictReader(f)
+    lines = f.readlines()
+    for line in lines:
+        sample = json.loads(line)
+        raw_samples.append(sample)
 
-all_pos_sample = reader
+# = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+# load samsum test back traslation
+file_path   = './data/samsum.test.bt.jsonl'
+bt_samples = []
+with open(file_path, 'r') as f:
+    lines = f.readlines()
+    for line in lines:
+        sample = json.loads(line)
+        bt_samples.append(sample)
+
+all_pos_sample = raw_samples + bt_samples
+*//
+
+
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 # perform Speaker Swap
