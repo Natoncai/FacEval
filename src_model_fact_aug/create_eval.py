@@ -7,6 +7,7 @@
 # -----
 
 import json
+import csv
 import logging
 
 from tqdm.contrib.concurrent import process_map
@@ -17,6 +18,7 @@ import augmentation_ops as ops
 file_path   = './data/ wiki-summary.test.csv'
 raw_samples = []
 with open(file_path, 'r') as f:
+    print(f)
     lines = f.readlines()
     for line in lines:
         sample = json.loads(line)
