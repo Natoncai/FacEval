@@ -38,7 +38,7 @@ file_path   = './data/Multi-News.jsonl'
 raw_samples = []
 with open(file_path, 'r') as f:
     f = f.lstrip('\ufeff')
-    lines = f.readlines()
+    lines = f.encode().decode('utf-8-sig')
     for line in lines:
         #print(line)
         sample = json.loads(line, encoding='utf-8-sig')
