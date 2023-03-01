@@ -11,6 +11,7 @@ import logging
 
 from tqdm.contrib.concurrent import process_map
 import augmentation_ops as ops
+
 """
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 # load samsum test
@@ -34,9 +35,10 @@ with open(file_path, 'r') as f:
 """
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 # load wiki-summary test
-file_path   = './data/wiki-sum.test.jsonl'
+file_path   = './data/Multi-News.jsonl'
+#file_path   = './data/samsum.test.jsonl'
 raw_samples = []
-with open(file_path, 'r') as f:
+with open(file_path, 'r', encoding='utf-8-sig') as f:
     lines = f.readlines()
     for line in lines:
         sample = json.loads(line)
