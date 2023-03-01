@@ -249,5 +249,5 @@ for sample in ng_samples:
     all_samples.append(sample)
 
 
-with open('./new_generated_samples.jsonl', 'w') as f:
+with open('./new_generated_samples.json', 'w') as f:
     json.dump(all_samples, f, indent=4)
