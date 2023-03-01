@@ -35,8 +35,7 @@ with open(file_path, 'r') as f:
 """
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 # load wiki-summary test
-file_path   = './data/Multi-News.jsonl'
-#file_path   = './data/samsum.test.jsonl'
+file_path   = './data/dialogsum-test.jsonl'
 raw_samples = []
 with open(file_path, 'r', encoding='utf-8-sig') as f:
     lines = f.readlines()
