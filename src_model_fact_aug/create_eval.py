@@ -40,7 +40,7 @@ with open(file_path, 'r') as f:
     lines = f.readlines()
     for line in lines:
         #print(line)
-        sample = json.loads(line)
+        sample = json.loads(line, encoding='utf-8-sig')
         raw_samples.append(sample)
 
 all_pos_sample = raw_samples #+ bt_samples
