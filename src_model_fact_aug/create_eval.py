@@ -36,7 +36,7 @@ with open(file_path, 'r') as f:
 # load wiki-summary test
 file_path   = './data/ca_test_data_final_OFFICIAL-Test.json'
 raw_samples = []
-with open(file_path, 'r', encoding='utf-8-sig') as f:
+with open(file_path, 'r') as f:
     lines = f.readlines()
     for line in lines:
         #print(line)
