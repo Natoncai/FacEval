@@ -7,7 +7,7 @@ start=`date +%s`
 echo "= = = = = = = = = = = = = ="
 
 
-python src_model_fact_aug/create_eval.py
+python3 src_model_fact_aug/create_eval.py
 
 
 echo "= = = = = = = = = = = = = ="
