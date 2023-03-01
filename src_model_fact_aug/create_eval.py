@@ -39,7 +39,7 @@ raw_samples = []
 with open(file_path, 'r') as f:
     lines = f.readlines()
     for line in lines:
-        print(line)
+        #print(line)
         sample = json.loads(line)
         raw_samples.append(sample)
 
