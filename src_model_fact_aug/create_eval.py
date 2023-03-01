@@ -37,6 +37,7 @@ with open(file_path, 'r') as f:
 file_path   = './data/Multi-News.jsonl'
 raw_samples = []
 with open(file_path, 'r') as f:
+    f = f.lstrip('\ufeff')
     lines = f.readlines()
     for line in lines:
         #print(line)
