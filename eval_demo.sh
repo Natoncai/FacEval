@@ -8,10 +8,10 @@ echo "= = = = = = = = = = = = = ="
 
 
 
-python fac_gen_src/main.py \
+python3 fac_gen_src/main.py \
     --neg_marker _neg \
     --output_dir ./scores_log/ \
-    --load_file ./data/faceval_samples.json \
+    --load_file ./data/wiki_corrupted_samples_short.json \
     --text_column dialogue \
     --summary_column summary \
     --model_name_or_path ./trained_model/ \
@@ -25,10 +25,10 @@ python fac_gen_src/main.py \
     --seed 12345
 
 
-python fac_gen_src/main.py \
+python3 fac_gen_src/main.py \
     --neg_marker ss_neg \
     --output_dir ./scores_log/ \
-    --load_file ./data/faceval_samples.json \
+    --load_file ./data/wiki_corrupted_samples_short.json \
     --text_column dialogue \
     --summary_column summary \
     --model_name_or_path ./trained_model/ \
@@ -41,10 +41,10 @@ python fac_gen_src/main.py \
     --overwrite_cache True \
     --seed 12345
 
-python fac_gen_src/main.py \
+python3 fac_gen_src/main.py \
     --neg_marker es_neg \
     --output_dir ./scores_log/ \
-    --load_file ./data/faceval_samples.json \
+    --load_file ./data/wiki_corrupted_samples_short.json \
     --text_column dialogue \
     --summary_column summary \
     --model_name_or_path ./trained_model/ \
@@ -58,10 +58,10 @@ python fac_gen_src/main.py \
     --seed 12345
 
 
-python fac_gen_src/main.py \
+python3 fac_gen_src/main.py \
     --neg_marker ps_neg \
     --output_dir ./scores_log/ \
-    --load_file ./data/faceval_samples.json \
+    --load_file ./data/wiki_corrupted_samples_short.json \
     --text_column dialogue \
     --summary_column summary \
     --model_name_or_path ./trained_model/ \
@@ -76,10 +76,10 @@ python fac_gen_src/main.py \
 
 
 
-python fac_gen_src/main.py \
+python3 fac_gen_src/main.py \
     --neg_marker ds_neg \
     --output_dir ./scores_log/ \
-    --load_file ./data/faceval_samples.json \
+    --load_file ./data/wiki_corrupted_samples_short.json \
     --text_column dialogue \
     --summary_column summary \
     --model_name_or_path ./trained_model/ \
@@ -94,10 +94,10 @@ python fac_gen_src/main.py \
 
 
 
-python fac_gen_src/main.py \
+python3 fac_gen_src/main.py \
     --neg_marker ns_neg \
     --output_dir ./scores_log/ \
-    --load_file ./data/faceval_samples.json \
+    --load_file ./data/wiki_corrupted_samples_short.json \
     --text_column dialogue \
     --summary_column summary \
     --model_name_or_path ./trained_model/ \
@@ -111,10 +111,10 @@ python fac_gen_src/main.py \
     --seed 12345
 
 
-python fac_gen_src/main.py \
+python3 fac_gen_src/main.py \
     --neg_marker ng_neg \
     --output_dir ./scores_log/ \
-    --load_file ./data/faceval_samples.json \
+    --load_file ./data/wiki_corrupted_samples_short.json \
     --text_column dialogue \
     --summary_column summary \
     --model_name_or_path ./trained_model/ \
