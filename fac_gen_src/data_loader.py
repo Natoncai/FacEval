@@ -10,6 +10,7 @@
 import json
 import random
 import logging
+import codecs
 
 import datasets
 from datasets import Dataset
@@ -43,8 +44,7 @@ def load_from_samsum(args, file_path):
     neg_summary_list  = []
     neg_marker_list   = []
 
-    with open(file_path, 'r') as f:
-        samples = json.load(f)
+    samples = json.load(codecs.open(file_path, 'r', 'utf-8-sig'))
 
     for sample in samples:
 
